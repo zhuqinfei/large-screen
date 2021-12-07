@@ -23,10 +23,7 @@ export default {
 <style lang='scss'>
 @import "../shared/helper";
 .home {
-    flex: 1;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    flex: 1; height: 100%; display: flex; flex-direction: column;
   > header {
     height: px(99);
     background-size: cover;
