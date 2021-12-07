@@ -5,15 +5,31 @@
     <meta name="viewport"
       content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
     <title>大屏可视化项目</title>
+    <script>
+      const clientWidth=document.documentElement.clientWidth
+      const clientHeight=document.documentElement.clientHeight
+      let pageWidth
+      if(clientWidth/clientHeight>16/9){
+          pageWidth=clientHeight*(16/9)
+      }else{
+          pageWidth=clientWidth
+      }
+      const pageHeight=clientWidth/(16/9)
+      const string=`<style>html{font-size:${pageWidth/100}px}</style>`
+      document.write(string)
+      console.log(string)
+    </script>
   </head>
 <body>
   <div id="app"></div>
+  <script>
+    const app=document.querySelector('#app')
+    app.style.width = pageWidth + 'px'
+    app.style.height = pageHeight + 'px'
+    app.style.marginTop = (clientHeight - pageHeight) / 2 + 'px'
+  </script>
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>
 
-<style>
-  body{
-    border:1px solid red;
-  }
-</style>
+
