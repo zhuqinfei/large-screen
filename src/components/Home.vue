@@ -1,14 +1,24 @@
 <template>
-    <div>
-        <div class="x"></div>
+    <div class="home">
+     <header :style="{backgroundImage:`url(${headerBg})`}"></header>
     </div>
 </template>
 
+<script lang="ts">
+import headerBg from '../images/header.png';
+export default {
+  setup(){
+    return{headerBg}
+  }
+}
+</script>
+
 <style lang='scss'>
 @import "../shared/helper";
-.x {
-  width: px(367);
-  height: px(315);
-  border: 1px solid red;
+.home{
+  >header{
+    height: px(99);
+    background-size: cover;
+  }
 }
 </style>
