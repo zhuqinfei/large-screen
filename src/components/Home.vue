@@ -28,6 +28,8 @@ export default {
   > header {
     height: px(99);
     background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
   }
   > main {
     padding-top: px(30);
