@@ -8,19 +8,17 @@
 <script lang="ts">
 import * as echarts from 'echarts';
 import { onMounted } from 'vue';
+import { baseEchartOptions } from '../shared/base-echart-options';
+import { createEchartsOptions } from '../shared/create-echarts-options';
+import { px } from '../shared/px';
 
 export default {
     setup() {
-        const px = (n) => n / 2024 * (window as any).pageWidth
         onMounted(() => {
             let myChart = echarts.init(document.getElementById("chart"));
+         
             myChart.setOption({
-                textStyle: {
-                    fontSize: px(12),
-                    color: '#79839E'
-                },
-                title: { show: false },
-                legend: { show: false },
+               ...baseEchartOptions,
                 xAxis: {
                     data: ['城关区', '七里河区', '西固区', '安宁区', '红谷区', '永登区', '翱兰区', '榆中区', '兰州新区'],
                     axisTick: { show: false },
@@ -49,12 +47,6 @@ export default {
                     axisLabel: {
                         fontSize: px(12)
                     }
-                },
-                grid: {
-                    x: px(40),
-                    y: px(40),
-                    x2: px(40),
-                    y2: px(60),
                 },
                 series: [
                     {

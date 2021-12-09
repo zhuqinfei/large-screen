@@ -4,6 +4,7 @@
     <main>
       <section class="section1">
         <Char1 />
+        <Char2 />
       </section>
       <section class="bordered section2"></section>
       <section class="bordered section3"></section>
@@ -16,12 +17,13 @@
 <script lang="ts">
 import headerBg from '../images/header.png';
 import Char1 from '../components/Char1.vue';
+import Char2 from '../components/Char2.vue';
 
 export default {
   setup() {
     return { headerBg, };
   },
-  components: { Char1 }
+  components: { Char1, Char2 }
 }
 </script>
 
