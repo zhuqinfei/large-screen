@@ -1,7 +1,7 @@
 <template>
-        <div class="bordered 管辖统计">
+        <div className="bordered 管辖统计">
             <h2>案发派出所管辖统计</h2>
-            <div id="chart" class="chart"></div>
+            <div id="chart" className="chart"></div>
         </div>
 </template>
 
@@ -9,7 +9,6 @@
 import * as echarts from 'echarts';
 import { onMounted } from 'vue';
 import { baseEchartOptions } from '../shared/base-echart-options';
-import { createEchartsOptions } from '../shared/create-echarts-options';
 import { px } from '../shared/px';
 
 export default {
