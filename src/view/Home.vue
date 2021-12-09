@@ -2,7 +2,9 @@
   <div class="home">
     <header :style="{ backgroundImage: `url(${headerBg})` }"></header>
     <main>
-      <Char1 />
+      <section class="section1">
+        <Char1 />
+      </section>
       <section class="bordered section2"></section>
       <section class="bordered section3"></section>
       <section class="bordered section4"></section>
@@ -13,13 +15,13 @@
 
 <script lang="ts">
 import headerBg from '../images/header.png';
-import Char1 from '../components/char-1.vue';
+import Char1 from '../components/Char1.vue';
 
 export default {
-    setup() {
-        return { headerBg, };
-    },
-    components: { Char1 }
+  setup() {
+    return { headerBg, };
+  },
+  components: { Char1 }
 }
 </script>
 

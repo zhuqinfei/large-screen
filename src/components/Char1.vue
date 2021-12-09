@@ -1,10 +1,8 @@
 <template>
-    <section class="section1">
         <div class="bordered 管辖统计">
             <h2>案发派出所管辖统计</h2>
             <div id="chart" class="chart"></div>
         </div>
-    </section>
 </template>
 
 <script lang="ts">
@@ -56,18 +54,16 @@ export default {
                     x: px(40),
                     y: px(40),
                     x2: px(40),
-                    y2: px(40),
+                    y2: px(60),
                 },
                 series: [
                     {
-                        name: '销量',
                         type: 'bar',
                         data: [10, 20, 36, 41, 15, 26, 37, 18, 29]
                     }
                 ]
             });
         })
-        return {}
     }
 }
 </script>
