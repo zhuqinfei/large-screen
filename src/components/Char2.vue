@@ -1,10 +1,10 @@
 <template>
-    <div className="bordered 破获排名">
+    <div class="bordered 破获排名">
         <h2>案件破获排名</h2>
-        <div id="chart2" className="chart"></div>
-        <div className="legend">
-            <span className="first" />破案排名1
-            <span className="second" />破案排名2
+        <div id="chart2" class="chart"></div>
+        <div class="legend">
+            <span class="first" />破案排名1
+            <span class="second" />破案排名2
         </div>
     </div>
 </template>
@@ -52,13 +52,36 @@ export default {
                     {
                         name: '2011年',
                         type: 'bar',
-                        data: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+                        data: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                        itemStyle: {
+                            normal: {
+                                color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
+                                    offset: 0,
+                                    color: '#2034f9'
+                                }, {
+                                    offset: 1,
+                                    color: '#04a1ff'
+                                }]),
+                            }
+                        }
                     },
                     {
                         name: '2012年',
                         type: 'bar',
-                        data: [2, 3, 4, 5, 6, 7, 8, 9, 10]
+                        data: [2, 3, 4, 5, 6, 7, 8, 9, 10],
+                        itemStyle: {
+                            normal: {
+                                color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
+                                    offset: 0,
+                                    color: '#b92ae8'
+                                }, {
+                                    offset: 1,
+                                    color: '#6773e7'
+                                }]),
+                            }
+                        }
                     }
+
                 ]
             });
         })
