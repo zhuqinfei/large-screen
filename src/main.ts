@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import './index.scss'
 import {createWebHashHistory,createRouter} from 'vue-router'
-import Home from './components/Home.vue'
+import Home from './view/Home.vue'
 
 
 const history=createWebHashHistory()
