@@ -22,7 +22,7 @@ export default {
             myChart.setOption({
                 ...baseEchartOptions,
                 grid: {
-                    x: px(60),
+                    x: px(62),
                     y: px(40),
                     x2: px(40),
                     y2: px(40),

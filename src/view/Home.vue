@@ -11,6 +11,9 @@
       <section className="bordered section4"></section>
       <section className="bordered section5"></section>
     </main>
+    <footer>
+      &copy; 个人出品 2020-{{year}}
+    </footer>
   </div>
 </template>
 
@@ -22,7 +25,8 @@ import '../home.scss'
 
 export default {
   setup() {
-    return { headerBg, };
+    const year = new Date().getFullYear();
+    return { headerBg, year};
   },
   components: { Char1, Char2 }
 }
