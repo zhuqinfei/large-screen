@@ -26,6 +26,7 @@ export default {
                     },
                     axisLabel: {
                         fontSize: px(12),
+                        interval:0,
                         formatter(val) {
                             if (val.length > 2) {
                                 const array = val.split('');

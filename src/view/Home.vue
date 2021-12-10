@@ -6,7 +6,9 @@
         <Char1 />
         <Char2 />
       </section>
-      <section className="bordered section2"></section>
+      <section className="section2">
+        <Chart3/>
+      </section>
       <section className="bordered section3"></section>
       <section className="bordered section4"></section>
       <section className="bordered section5"></section>
@@ -22,13 +24,14 @@ import headerBg from '../images/header.png';
 import Char1 from '../components/Char1.vue';
 import Char2 from '../components/Char2.vue';
 import '../home.scss'
+import Chart3 from '../components/Chart3.vue';
 
 export default {
   setup() {
     const year = new Date().getFullYear();
     return { headerBg, year};
   },
-  components: { Char1, Char2 }
+  components: { Char1, Char2, Chart3 }
 }
 </script>
 

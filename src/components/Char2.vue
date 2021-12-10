@@ -23,9 +23,9 @@ export default {
                 ...baseEchartOptions,
                 grid: {
                     x: px(62),
-                    y: px(40),
-                    x2: px(40),
-                    y2: px(40),
+                    y: px(20),
+                    x2: px(20),
+                    y2: px(20),
                 },
                 xAxis: {
                     type: 'value',
@@ -44,7 +44,7 @@ export default {
                         fontSize: px(12),
                         formatter(val) {
                             return val.replace('公安局', '\n公安局');
-                        }
+                        },
                     },
                     axisTick: { show: false },
                 },
