@@ -45,6 +45,7 @@ export default {
                         formatter(val) {
                             return val.replace('公安局', '\n公安局');
                         },
+                        //interval: 0,
                     },
                     axisTick: { show: false },
                 },

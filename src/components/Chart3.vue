@@ -18,14 +18,14 @@ export default {
             myChart.setOption({
                 ...baseEchartOptions,
                 legend: {
-                    bottom: px(10),
+                    bottom: px(-6),
                     textStyle: { color: 'white' },
                     itemWidth: px(30),
                     itemHeight: px(16),
                     height: px(6)
                 },
                 grid: {
-                    x: px(10),
+                    x: px(-8),
                     x2: px(20),
                     y: px(20),
                     y2: px(60),
