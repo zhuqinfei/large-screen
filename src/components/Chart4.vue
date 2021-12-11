@@ -1,7 +1,7 @@
 <template>
-    <div class="bordered 案发时段">
+    <div className="bordered 案发时段">
         <h2>案发时段分析</h2>
-        <div id="chart4" class="chart" />
+        <div id="chart4" className="chart" />
     </div>
 </template>
 
