@@ -8,6 +8,7 @@
       </section>
       <section className="section2">
         <Chart3/>
+        <Chart4/>
       </section>
       <section className="bordered section3"></section>
       <section className="bordered section4"></section>
@@ -25,13 +26,14 @@ import Char1 from '../components/Char1.vue';
 import Char2 from '../components/Char2.vue';
 import '../home.scss'
 import Chart3 from '../components/Chart3.vue';
+import Chart4 from '../components/Chart4.vue';
 
 export default {
   setup() {
     const year = new Date().getFullYear();
     return { headerBg, year};
   },
-  components: { Char1, Char2, Chart3 }
+  components: { Char1, Char2, Chart3, Chart4 }
 }
 </script>
 
