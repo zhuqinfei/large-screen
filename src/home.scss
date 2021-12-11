@@ -127,16 +127,22 @@
           display: flex;
           > .main {flex: 1;}
           > .text {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            color: #33a4fa; font-size: px(40); text-shadow: 0 0 px(20) #33a4fa;font-weight: bold;}
+            color: #33a4fa; font-size: px(40); text-shadow: 0 0 px(20) #33a4fa;font-weight: bold;
+          }
         }
       }
-    }
-    &-图2 {
-      width: px(290); flex-shrink: 0;
-      .legend {
-        justify-content: flex-start;
+      &-图2 {
+        width: px(290); flex-shrink: 0;
+        .legend {
+          justify-content: flex-start;
+        }
+      }
+      &-图3 {
+        border: 1px solid #08397d;
+        h3 {font-size: px(20); color: #7ab6db; margin-top: px(6);}
       }
     }
+   
     .籍贯 {
       height: px(746); background: transparent;
       > .wrapper {
@@ -206,6 +212,6 @@
             background: linear-gradient(90deg, #b92ae8 0%, #6773e7 100%);
           }
         }
-      }
+    }
   }
 }

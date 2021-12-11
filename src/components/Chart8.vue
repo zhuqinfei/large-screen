@@ -41,7 +41,7 @@ export default {
               show: true, position: 'inside', textStyle: { color: 'white', fontSize: px(20) },
               formatter(options) {
                 return (options.value * 100).toFixed(0) + '%';
-              }
+              },
             },
             labelLine: { show: false },
             itemStyle: {
