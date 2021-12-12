@@ -1,5 +1,5 @@
 <template>
-    <div id="chart10" className="chart"></div>
+    <div id="chart13" class="chart"></div>
 </template>
 
 <script lang="ts">
@@ -10,13 +10,23 @@ import { px } from '../shared/px';
 
 export default {
     setup() {
+        const data = [
+            { value: 0.08, name: '东岗路' },
+            { value: 0.06, name: '段家滩' },
+            { value: 0.11, name: '雁北' },
+            { value: 0.09, name: '五泉山' },
+            { value: 0.12, name: '中山路' },
+            { value: 0.06, name: '庆阳路' },
+            { value: 0.08, name: '武都路' },
+            { value: 0.08, name: '酒泉路' },
+            { value: 0.08, name: '天水路' },
+        ];
         onMounted(() => {
-            let myChart = echarts.init(document.getElementById("chart10"));
-
+            let myChart = echarts.init(document.getElementById("chart13"));
             myChart.setOption({
                 ...baseEchartOptions,
                 xAxis: {
-                    data: ['入室抢劫', '当街偷盗', '团伙诈骗', '刑事案件', '民事案件'],
+                    data: data.map(i => i.name),
                     axisTick: { show: false },
                     axisLine: {
                         lineStyle: { color: '#083B70' }
@@ -44,11 +54,14 @@ export default {
                     },
                     axisLabel: {
                         fontSize: px(12),
-                    },
+                        formatter(value) {
+                            return (value * 100).toFixed(0) + '%';
+                        }
+                    }
                 },
                 series: [{
                     type: 'bar',
-                    data: [40, 22, 20, 18, 32],
+                    data: data.map(i => i.value),
                     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                         offset: 0,
                         color: '#0A97FB'
