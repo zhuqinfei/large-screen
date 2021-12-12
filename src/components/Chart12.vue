@@ -1,0 +1,70 @@
+<template>
+    <div class="年龄段-图1">
+        <div class="chart">
+            <div class="main" id="chart12" />
+        </div>
+    </div>
+</template>
+
+<script lang="ts">
+import * as echarts from 'echarts';
+import { onMounted } from 'vue';
+import { baseEchartOptions } from '../shared/base-echart-options';
+import { px } from '../shared/px';
+
+export default {
+    setup() {
+        const colors = ['#F46064', '#F38E1C', '#1CDB7C', '#8D70F8', '#33A4FA'];
+        const data = [
+            { value: 0.08, name: '东岗路' },
+            { value: 0.06, name: '段家滩' },
+            { value: 0.11, name: '雁北' },
+            { value: 0.09, name: '五泉山' },
+            { value: 0.12, name: '中山路' },
+            { value: 0.06, name: '庆阳路' },
+            { value: 0.08, name: '武都路' },
+            { value: 0.08, name: '酒泉路' },
+            { value: 0.08, name: '天水路' },
+        ];
+        onMounted(() => {
+            let myChart = echarts.init(document.getElementById("chart12"));
+            myChart.setOption({
+                ...baseEchartOptions,
+                xAxis: { show: false },
+                yAxis: { show: false },
+                grid: { x: 0, x2: 0, y: 0, y2: 0, containLabel: true },
+                legend: {
+                    orient: 'vertical',
+                    left: 'left',
+                    top: 'center',
+                    textStyle: { color: 'white' },
+                    itemWidth: px(10),
+                    itemHeight: px(10),
+
+                },
+                tooltip: {
+                    trigger: 'item'
+                },
+                series: [
+                    {
+                        center: ['60%', '50%'],
+                        type: 'pie',
+                        radius: '80%',
+                        label: { show: false },
+                        labelLine: { show: false },
+                        data: data,
+                        emphasis: {
+                            itemStyle: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        }
+                    }
+                ]
+            });
+        })
+        return { colors }
+    }
+}
+</script>
