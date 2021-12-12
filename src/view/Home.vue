@@ -41,6 +41,7 @@
           </div>
           <div className="bordered row3 作案手段">
             <h2>作案手段分析</h2>
+            <Chart14/>
           </div>
         </section>
     </main>
@@ -66,13 +67,14 @@ import Chart10 from '../components/Chart10.vue';
 import Chart11 from '../components/Chart11.vue';
 import Chart12 from '../components/Chart12.vue';
 import Chart13 from '../components/Chart13.vue';
+import Chart14 from '../components/Chart14.vue';
 
 export default {
   setup() {
     const year = new Date().getFullYear();
     return { headerBg, year};
   },
-  components: { Char1, Char2, Chart3, Chart4, Chart5, Chart6, Chart7, Chart8, Chart9, Chart10, Chart11, Chart12, Chart13 }
+  components: { Char1, Char2, Chart3, Chart4, Chart5, Chart6, Chart7, Chart8, Chart9, Chart10, Chart11, Chart12, Chart13, Chart14 }
 }
 </script>
 
