@@ -28,7 +28,7 @@
           <div className="bordered row1 案发类型">
             <h2>案发类型统计</h2>
             <div className="charts">
-
+              <Chart10/>
             </div>
           </div>
           <div className="bordered row2 案发街道">
@@ -60,13 +60,14 @@ import Chart6 from '../components/Chart6.vue';
 import Chart7 from '../components/Chart7.vue';
 import Chart9 from '../components/Chart9.vue';
 import Chart8 from '../components/Chart8.vue';
+import Chart10 from '../components/Chart10.vue';
 
 export default {
   setup() {
     const year = new Date().getFullYear();
     return { headerBg, year};
   },
-  components: { Char1, Char2, Chart3, Chart4, Chart5, Chart6, Chart7, Chart9, Chart8 }
+  components: { Char1, Char2, Chart3, Chart4, Chart5, Chart6, Chart7, Chart9, Chart8, Chart10 }
 }
 </script>
 
