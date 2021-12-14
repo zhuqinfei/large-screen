@@ -11,15 +11,25 @@
 
 <script lang="ts">
 import * as echarts from 'echarts';
-import { onMounted } from 'vue';
+import {onMounted, onUpdated, ref, } from 'vue';
 import { baseEchartOptions } from '../shared/base-echart-options';
-import { px } from '../shared/px';
-
+import { px } from '../shared/px'
 export default {
     setup() {
-        onMounted(() => {
-            let myChart = echarts.init(document.getElementById("chart2"));
-            myChart.setOption({
+        const myChart = ref(null)
+        const data = [
+            { name: '城关区公安局', 2011: 2, 2012: 3 },
+            { name: '七里河区公安局', 2011: 2, 2012: 3 },
+            { name: '西固区公安局', 2011: 2, 2012: 3 },
+            { name: '安宁区公安局', 2011: 2, 2012: 3 },
+            { name: '红古区公安局', 2011: 2, 2012: 3 },
+            { name: '永登县公安局', 2011: 2, 2012: 3 },
+            { name: '皋兰县公安局', 2011: 2, 2012: 3 },
+            { name: '榆中县公安局', 2011: 2, 2012: 3 },
+            { name: '新区公安局', 2011: 2, 2012: 3 },
+        ];
+        const x = (data) => {
+            myChart.current.setOption({
                 ...baseEchartOptions,
                 grid: {
                     x: px(62),
@@ -85,6 +95,26 @@ export default {
 
                 ]
             });
+        }
+        onMounted(() => {
+            myChart.current = echarts.init(document.getElementById("chart2"));
+            x(data);
+        })
+        onUpdated(() => {
+            setInterval(() => {
+                const newData = [
+                    { name: '城关区公安局', 2011: 2, 2012: Math.random() * 10 },
+                    { name: '七里河区公安局', 2011: 2, 2012: 3 },
+                    { name: '西固区公安局', 2011: 2, 2012: 3 },
+                    { name: '安宁区公安局', 2011: 2, 2012: 3 },
+                    { name: '红古区公安局', 2011: 2, 2012: 3 },
+                    { name: '永登县公安局', 2011: 2, 2012: 3 },
+                    { name: '皋兰县公安局', 2011: 2, 2012: 3 },
+                    { name: '榆中县公安局', 2011: 2, 2012: 3 },
+                    { name: '新区公安局', 2011: 2, 2012: 3 },
+                ];
+                x(newData);
+            }, 100);
         })
     }
 }
