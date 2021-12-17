@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import * as echarts from 'echarts';
-import {onMounted, onUpdated, ref, } from 'vue';
+import {nextTick, onMounted, onUpdated, ref, } from 'vue';
 import { baseEchartOptions } from '../shared/base-echart-options';
 import { px } from '../shared/px'
 export default {
@@ -101,9 +101,9 @@ export default {
             x(data);
               console.log('1')
         })
-        onUpdated(() => {
-            console.log('2')
-            setTimeout(() => {
+      
+        nextTick(()=>{
+              setInterval(() => {
                 const newData = [
                     { name: '城关区公安局', 2011: 2, 2012: Math.random() * 10 },
                     { name: '七里河区公安局', 2011: 2, 2012: 3 },
@@ -116,7 +116,7 @@ export default {
                     { name: '新区公安局', 2011: 2, 2012: 3 },
                 ];
                 x(newData);
-            }, 250);
+            }, 1000);
         })
     }
 }
