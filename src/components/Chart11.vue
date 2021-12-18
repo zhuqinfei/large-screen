@@ -1,5 +1,5 @@
 <template>
-    <div className="年龄段-图1">
+    <div className="chart11">
         <div className="chart">
             <div className="main" id="chart11"></div>
         </div>

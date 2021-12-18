@@ -1,4 +1,11 @@
 @import "./shared/helper";
+
+%legend {
+  height: px(40); display: flex; align-items: center;
+  justify-content: center; flex-wrap: wrap; padding-right: px(10);
+  > span {display: inline-block; width: px(16); height: px(10);
+    border-radius: px(2); margin: 0 px(8);}
+}
 .home {
   flex: 1;
   display: flex;
@@ -122,8 +129,12 @@
     .案发时段{
       height: px(353);
     }
-    .chart12 {
+    .chart11,.chart12 {
       flex: 1;display: flex; flex-direction: column;
+      > .chart {display: flex;
+        > .main {flex: 1}
+      }
+      .legend {@extend %legend;}
     }
     .年龄段 {display: flex;flex-direction: column;
       height: px(350);
@@ -134,10 +145,7 @@
         flex: 1;display: flex; flex-direction: column;
       }
       &-图1,&-图2 {
-        .legend {height: px(40); display: flex; align-items: center;
-          justify-content: center; flex-wrap: wrap; 
-          > span {display: inline-block; width: px(16); height: px(10);
-            border-radius: px(2); margin: 0 px(8);}
+        .legend { @extend %legend;
           .male {background: #33a4fa;}
           .female {background: #8d70f8;}
         }
