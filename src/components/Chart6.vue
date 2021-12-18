@@ -4,9 +4,9 @@
         <div className="wrapper">
         <div id="chart6" className="chart"/>
         <div className="legend bordered">
-          <span className="icon" :style="{background: colors['西藏自治区']}"/>西藏籍
-          <span className="icon" :style="{background: colors['四川省']}"/>四川籍
-          <span className="icon" :style="{background: colors['青海省']}"/>青海籍
+          <span className="icon" :style="{background: colors['西藏自治区']}"/>西边籍
+          <span className="icon" :style="{background: colors['四川省']}"/>中边籍
+          <span className="icon" :style="{background: colors['青海省']}"/>南边籍
         </div>
         <div className="notes">此地图仅显示了中国的部分区域</div>
       </div>
