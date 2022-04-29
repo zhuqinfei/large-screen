@@ -15,15 +15,13 @@ import { px } from '../shared/px';
 export default {
     setup() {
         const data = [
-            { value: 0.08, name: '东岗路' },
-            { value: 0.06, name: '段家滩' },
-            { value: 0.11, name: '雁北' },
-            { value: 0.09, name: '五泉山' },
-            { value: 0.12, name: '中山路' },
-            { value: 0.06, name: '庆阳路' },
-            { value: 0.08, name: '武都路' },
-            { value: 0.08, name: '酒泉路' },
-            { value: 0.08, name: '天水路' },
+            { value: 0.06, name: 'QQ' },
+            { value: 0.21, name: '微信' },
+            { value: 0.11, name: '抖音' },
+            { value: 0.09, name: '快手' },
+            { value: 0.12, name: '陌陌' },
+            { value: 0.05, name: '淘宝' },
+            { value: 0.12, name: '探探' },
         ];
         onMounted(() => {
             let myChart = echarts.init(document.getElementById("chart12"));

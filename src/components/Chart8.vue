@@ -5,11 +5,11 @@
       <div className="text">年龄段</div>
     </div>
     <div className="legend">
-      <span :style="{ background: colors[0] }" />10-20
-      <span :style="{ background: colors[1] }" />20-30
-      <span :style="{ background: colors[2] }" />30-40
-      <span :style="{ background: colors[3] }" />40-50
-      <span :style="{ background: colors[4] }" />50-60
+      <span :style="{ background: colors[0] }" />0-20
+      <span :style="{ background: colors[1] }" />20-40
+      <span :style="{ background: colors[2] }" />40-60
+      <span :style="{ background: colors[3] }" />60-80
+   
     </div>
   </div>
 </template>
@@ -49,11 +49,11 @@ export default {
               borderWidth: px(4)
             },
             data: [
-              { value: 0.07, name: '10-20' },
-              { value: 0.10, name: '20-30' },
-              { value: 0.23, name: '30-40' },
-              { value: 0.28, name: '40-50' },
-              { value: 0.32, name: '50-60' },
+              { value: 0.15, name: '0-20' },
+              { value: 0.62, name: '20-40' },
+              { value: 0.15, name: '40-60' },
+              { value: 0.06, name: '60-80' },
+              { value: 0.02, name: '80-100' },
             ]
           }
         ]

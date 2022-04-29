@@ -16,7 +16,7 @@ export default {
             myChart.setOption({
                 ...baseEchartOptions,
                 xAxis: {
-                    data: ['入室抢劫', '当街偷盗', '团伙诈骗', '刑事案件', '民事案件'],
+                    data: ['网上购物', '实体购物', '电话购物', '电视购物', '其他'],
                     axisTick: { show: false },
                     axisLine: {
                         lineStyle: { color: '#083B70' }

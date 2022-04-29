@@ -1,19 +1,26 @@
 <template>
-    <div className="bordered 案发时段">
-        <h2>案发时段分析</h2>
-        <div id="chart4" className="chart" />
-    </div>
+  <div className="bordered 企业新增">
+    <h2>全市新增企业统计</h2>
+    <div id="chart4" className="chart" />
+  </div>
 </template>
 
 <script lang="ts">
 import * as echarts from 'echarts';
-import { onMounted } from 'vue';
+import { nextTick,onMounted,ref } from 'vue';
 import { baseEchartOptions } from '../shared/base-echart-options';
 import { px } from '../shared/px';
-
 export default {
     setup() {
-        onMounted(() => {
+      const myChart = ref(null)
+        const data = [
+            0.15, 0.13, 0.11,
+            0.13, 0.14, 0.15,
+            0.16, 0.18, 0.21,
+            0.19, 0.17, 0.16,
+            0.15
+        ];
+        const y = (data) => {
             let myChart = echarts.init(document.getElementById("chart4"));
             myChart.setOption({
                 ...baseEchartOptions,
@@ -26,7 +33,7 @@ export default {
                 xAxis: {
                     type: 'category',
                     boundaryGap: false,
-                    data: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24],
+                    data: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
                     splitLine: { show: true, lineStyle: { color: '#073E78' } },
                     axisTick: { show: false },
                     axisLine: { show: false },
@@ -48,13 +55,7 @@ export default {
                 series: [{
                     name: '故意伤人',
                     type: 'line',
-                    data: [
-                        0.15, 0.13, 0.11,
-                        0.13, 0.14, 0.15,
-                        0.16, 0.18, 0.21,
-                        0.19, 0.17, 0.16,
-                        0.15
-                    ],
+                    data:data,
                     symbol: 'circle',
                     symbolSize: px(12),
                     lineStyle: { width: px(2) },
@@ -69,7 +70,37 @@ export default {
                     }
                 }]
             });
+        }
+     
+       onMounted(() => {
+            myChart.current = echarts.init(document.getElementById("chart4"));
+            y(data);
         })
+      
+        nextTick(()=>{
+              setInterval(() => {
+                  a()
+               
+            }, 6000); 
+           
+           function a(){
+                const newData = [
+                   0.17, 0.12, 0.14,
+                   0.15, 0.12, 0.16,
+                   0.18, 0.13, 0.19,
+                   0.21, 0.16, 0.17,
+                   0.13
+                ];
+                y(newData);
+                setTimeout(()=>{
+                    b()
+                },3000)
+           }
+             function b(){
+                 y(data)
+           }
+           
+        })   
     }
 }
 </script>

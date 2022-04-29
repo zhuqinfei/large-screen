@@ -2,51 +2,60 @@
     <table>
         <thead>
             <tr>
-                <th colspan=2>类型</th>
-                <th>单数</th>
-                <th>总计</th>
+               <th >景点</th>
+                <th>级别</th>
+                <th>评分</th>
+                <th>门票</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td rowspan=3>入室盗窃</td>
-                <td>翻窗入室</td>
-                <td>10</td>
-                <td rowspan=3>50</td>
+                <td>深圳欢乐谷</td>
+                <td >5A</td>
+                <td >4.8</td>
+                <td >115</td>
+            </tr>
+             <tr>
+                <td>世界之窗</td>
+                <td >5A</td>
+                <td >4.7</td>
+                <td >85</td>
             </tr>
             <tr>
-                <td>撬门入室</td>
-                <td>20</td>
+                <td>锦绣中华村</td>
+                <td >5A</td>
+                <td >4.8</td>
+                <td >65</td>
             </tr>
             <tr>
-                <td>技术开锁</td>
-                <td>20</td>
+                <td>观澜度假区</td>
+                <td >5A</td>
+                <td >4.5</td>
+                <td >95</td>
             </tr>
             <tr>
-                <td>抢夺</td>
-                <td>飞车抢夺</td>
-                <td>22</td>
-                <td>44</td>
+                <td>野生动物园</td>
+                <td >4A</td>
+                <td >4.6</td>
+                <td >109</td>
             </tr>
-            <tr>
-                <td rowspan=2>扒窃</td>
-                <td>公交车扒窃</td>
-                <td>40</td>
-                <td rowspan=2>85</td>
+              <tr>
+                <td>东部华侨城</td>
+                <td >4A</td>
+                <td >4.5</td>
+                <td >118</td>
             </tr>
-            <tr>
-                <td>街面扒窃</td>
-                <td>45</td>
+             <tr>
+                <td>青青世界</td>
+                <td >4A</td>
+                <td >4.3</td>
+                <td >76</td>
             </tr>
-            <tr>
-                <td rowspan=2>诈骗</td>
-                <td>甩票子诈骗</td>
-                <td>32</td>
-                <td rowspan=2>102</td>
-            </tr>
-            <tr>
-                <td>买手机诈骗</td>
-                <td>80</td>
+             <tr>
+                <td>海上田园</td>
+                <td >4A</td>
+                <td >4.4</td>
+                <td >40</td>
             </tr>
         </tbody>
     </table>

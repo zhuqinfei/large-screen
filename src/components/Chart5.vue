@@ -1,22 +1,22 @@
 <template>
-    <div className="战果">
-      <h2>往年战果数对比</h2>
+    <div className="出行方式">
+      <h2>出行方式占比</h2>
       <table>
         <thead>
         <tr>
-          <th>年份</th><th>破案数</th><th>抓获嫌疑人</th><th>并串案件</th><th>现勘录入</th>
-          <th>视侦录入</th><th>合成案件数</th><th>合计</th>
+          <th>年份</th><th>地铁</th><th>步行</th><th>汽车</th><th>公交车</th>
+          <th>网约车</th><th>单车</th><th>其他</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-          <td>2015</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
+          <td>2019</td><td>50%</td><td>12%</td><td>8%</td><td>20%</td><td>4%</td><td>5%</td><td>1%</td>
         </tr>
         <tr>
-          <td>2016</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
+           <td>2020</td><td>49%</td><td>11%</td><td>9%</td><td>20%</td><td>4%</td><td>4%</td><td>1%</td>
         </tr>
         <tr>
-          <td>2017</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
+          <td>2021</td><td>48%</td><td>11%</td><td>10%</td><td>20%</td><td>5%</td><td>3%</td><td>1%</td>
         </tr>
         </tbody>
       </table>

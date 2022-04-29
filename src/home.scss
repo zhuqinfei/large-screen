@@ -18,6 +18,12 @@
     background-size: cover;
     width: px(2420);
     margin: 0 auto;
+    >.nowDate{
+      padding-left: px(1450);
+      padding-top: px(78);
+      color:#6d929d;
+      transform: scale(0.6);font-size: 12px;
+    }
   }
   >footer{
     height: px(68);
@@ -99,7 +105,7 @@
         height: px(455);
       }
     }
-    .管辖统计,.破获排名,.发案趋势, .案发时段, .战果, .籍贯, .年龄段, .案发类型, .案发街道, .作案手段  {
+    .管辖统计,.增长排名,.增长趋势, .企业新增, .出行方式, .地区, .年龄段, .消费类型, .社交方式, .旅游资源  {
       height: px(315);
       display: flex;
       flex-direction: column;
@@ -123,10 +129,10 @@
         width: 100%;
       }
     }
-    .发案趋势{
+    .增长趋势{
       height: px(363);
     }
-    .案发时段{
+    .企业新增{
       height: px(353);
     }
     .chart11,.chart12 {
@@ -170,7 +176,7 @@
       }
     }
    
-    .籍贯 {
+    .地区{
       height: px(746); background: transparent;
       > .wrapper {
         position: relative;width: 100%;flex: 1;
@@ -197,7 +203,7 @@
         }
       }
     }
-    .战果, .作案手段 {
+    .出行方式, .旅游资源 {
       padding: 0 px(24);
       > table {
         width: 100%; table-layout: fixed;
@@ -220,7 +226,7 @@
         }
       }
     }
-    .作案手段 {
+    .旅游资源 {
       > table {
         tbody {
         
@@ -230,7 +236,7 @@
         }
       }
     }
-    .破获排名 {
+    .增长排名 {
         height: px(400);
         margin-top:8px;
         .legend {

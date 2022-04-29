@@ -4,10 +4,10 @@
             <div className="main" id="chart11"></div>
         </div>
         <div class="legend">
-            <span :style="{ background: colors[0] }" />刑事
-            <span :style="{ background: colors[1] }" />民事
-            <span :style="{ background: colors[2] }" />经济
-            <span :style="{ background: colors[3] }" />其他
+            <span :style="{ background: colors[0] }" />网上
+            <span :style="{ background: colors[1] }" />实体
+            <span :style="{ background: colors[2] }" />电话
+            <span :style="{ background: colors[3] }" />电视
         </div>
     </div>
 </template>
@@ -59,10 +59,10 @@ export default {
                             shadowColor: 'rgba(0, 0, 0, 0.5)'
                         },
                         data: [
-                            { value: 0.36, name: '刑事案件' },
-                            { value: 0.20, name: '民事案件' },
-                            { value: 0.18, name: '经济案件' },
-                            { value: 0.24, name: '其他案件' },
+                            { value: 0.36, name: '网上' },
+                            { value: 0.20, name: '实体' },
+                            { value: 0.18, name: '电话' },
+                            { value: 0.24, name: '电视' },
                         ]
                     }
                 ]

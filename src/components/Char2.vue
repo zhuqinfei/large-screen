@@ -1,10 +1,10 @@
 <template>
-    <div class="bordered 破获排名">
-        <h2>案件破获排名</h2>
+    <div class="bordered 增长排名">
+        <h2>经济增长排名</h2>
         <div id="chart2" class="chart"></div>
         <div class="legend">
-            <span class="first" />破案排名1
-            <span class="second" />破案排名2
+            <span class="first" />增长排名1
+            <span class="second" />增长排名2
         </div>
     </div>
 </template>
@@ -18,15 +18,15 @@ export default {
     setup() {
         const myChart = ref(null)
         const data = [
-            { name: '城关区公安局', 2011: 2, 2012: 4},
-            { name: '七里河区公安局', 2011: 2, 2012: 3 },
-            { name: '西固区公安局', 2011: 2, 2012: 3 },
-            { name: '安宁区公安局', 2011: 2, 2012: 3 },
-            { name: '红古区公安局', 2011: 2, 2012: 3 },
-            { name: '永登县公安局', 2011: 2, 2012: 3 },
-            { name: '皋兰县公安局', 2011: 2, 2012: 3 },
-            { name: '榆中县公安局', 2011: 2, 2012: 3 },
-            { name: '新区公安局', 2011: 2, 2012: 3 },
+            { name: '罗湖区', 2011: 2, 2012: 4},
+            { name: '福田区', 2011: 2, 2012: 3 },
+            { name: '南山区', 2011: 2, 2012: 3 },
+            { name: '盐田区', 2011: 2, 2012: 3 },
+            { name: '宝安区', 2011: 2, 2012: 3 },
+            { name: '龙华区', 2011: 2, 2012: 3 },
+            { name: '龙岗区', 2011: 2, 2012: 3 },
+            { name: '坪山区', 2011: 2, 2012: 3 },
+            { name: '光明区', 2011: 2, 2012: 3 },
         ];
         const x = (data) => {
             myChart.current.setOption({
@@ -99,21 +99,20 @@ export default {
         onMounted(() => {
             myChart.current = echarts.init(document.getElementById("chart2"));
             x(data);
-              console.log('1')
         })
       
         nextTick(()=>{
               setInterval(() => {
                 const newData = [
-                    { name: '城关区公安局', 2011: 2, 2012: Math.random() * 10 },
-                    { name: '七里河区公安局', 2011: 2, 2012: 3 },
-                    { name: '西固区公安局', 2011: 2, 2012: 3 },
-                    { name: '安宁区公安局', 2011: 2, 2012: 3 },
-                    { name: '红古区公安局', 2011: 2, 2012: 3 },
-                    { name: '永登县公安局', 2011: 2, 2012: 3 },
-                    { name: '皋兰县公安局', 2011: 2, 2012: 3 },
-                    { name: '榆中县公安局', 2011: 2, 2012: 3 },
-                    { name: '新区公安局', 2011: 2, 2012: 3 },
+                    { name: '罗湖区', 2011: 2, 2012: Math.random() * 10 },
+                    { name: '福田区', 2011: 2, 2012: 3 },
+                    { name: '南山区', 2011: 2, 2012: 3 },
+                    { name: '盐田区', 2011: 2, 2012: 3 },
+                    { name: '宝安区', 2011: 2, 2012: 3 },
+                    { name: '龙华区', 2011: 2, 2012: 3 },
+                    { name: '龙岗区', 2011: 2, 2012: 3 },
+                    { name: '坪山区', 2011: 2, 2012: 3 },
+                    { name: '光明区', 2011: 2, 2012: 3 },
                 ];
                 x(newData);
             }, 1000);

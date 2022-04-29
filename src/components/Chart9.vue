@@ -1,6 +1,6 @@
 <template>
   <div class="年龄段-图3">
-    <h3>犯罪年龄趋势图</h3>
+    <h3>年龄趋势图</h3>
     <div id="chart9" class="chart"></div>
   </div>
 </template>
@@ -27,7 +27,7 @@ export default {
         xAxis: {
           type: 'category',
           boundaryGap: false,
-          data: [0, 18, 28, 38, 48, 58, 68, 78],
+          data: [0, 10,20, 30,40,50, 60, 70,80],
           splitLine: { show: true, lineStyle: { color: '#073E78' } },
           axisTick: { show: false },
           axisLine: { show: false },
@@ -49,9 +49,9 @@ export default {
         series: [{
           type: 'line',
           data: [
-            0.19, 0.20, 0.26,
-            0.35, 0.26, 0.20,
-            0.08, 0.06
+            0.07,0.08,0.30,
+            0.32,0.08,0.07,
+            0.04,0.01,0.01
           ],
           symbol: 'circle',
           symbolSize: px(12),

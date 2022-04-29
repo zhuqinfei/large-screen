@@ -45,8 +45,8 @@ export default {
                             borderWidth: px(4)
                         },
                         data: [
-                            { value: 0.2, name: '女' },
-                            { value: 0.8, name: '男' },
+                            { value: 0.41, name: '女' },
+                            { value: 0.59, name: '男' },
                         ]
                     }
                 ]

@@ -1,6 +1,6 @@
 <template>
         <div className="bordered 管辖统计">
-            <h2>案发派出所管辖统计</h2>
+            <h2>人口分布统计</h2>
             <div id="chart" className="chart"></div>
         </div>
 </template>
@@ -19,7 +19,7 @@ export default {
             myChart.setOption({
                ...baseEchartOptions,
                 xAxis: {
-                    data: ['城关区', '七里河区', '西固区', '安宁区', '红谷区', '永登区', '翱兰区', '榆中区', '兰州新区'],
+                    data: ['罗湖区', '福田区', '南山区', '盐田区', '宝安区', '龙华区', '龙岗区', '坪山区', '光明区'],
                     axisTick: { show: false },
                     axisLine: {
                         lineStyle: { color: '#083B70' }
